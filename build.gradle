@@ -1,0 +1,31 @@
+//apply plugin: 'java'
+//apply plugin: 'application'
+
+plugins {
+	id 'java'
+	id 'application'
+}
+
+jar {
+    manifest {
+        attributes 'Main-Class': 'hello.HelloWorld'
+    }
+}
+
+application {
+    mainClassName = 'hello.HelloWorld'
+}
+
+repositories {
+	mavenLocal()
+	mavenCentral()
+}
+
+dependencies {
+
+}
+
+jar {
+	baseName = 'test-gradle'
+	version = '0.1.0'
+}
